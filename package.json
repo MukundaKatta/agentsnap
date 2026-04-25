@@ -1,5 +1,5 @@
 {
-  "name": "agentsnap",
+  "name": "@mukundakatta/agentsnap",
   "version": "0.1.0",
   "description": "Snapshot tests for AI agents — record tool-call traces, diff against baselines, fail CI on regressions. Zero dependencies, drops into any test runner.",
   "type": "module",

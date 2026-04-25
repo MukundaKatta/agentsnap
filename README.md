@@ -3,11 +3,11 @@
 **Snapshot tests for AI agents.** Record an agent run's tool-call trace, diff it against a baseline, fail CI on regressions. Zero runtime dependencies. Drops into any test runner.
 
 ```bash
-npm install --save-dev agentsnap
+npm install --save-dev @mukundakatta/agentsnap
 ```
 
 ```js
-import { record, traceTool, expectSnapshot } from 'agentsnap';
+import { record, traceTool, expectSnapshot } from '@mukundakatta/agentsnap';
 
 const search = traceTool('search', async ({ q }) => fetchResults(q));
 const summarize = traceTool('summarize', async ({ docs }) => llm(docs));
