@@ -1,0 +1,13 @@
+{
+  "name": "agentsnap-research-bot-demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Realistic agentsnap demo: a 3-tool research bot whose tool sequence changes when you swap models.",
+  "scripts": {
+    "demo": "node demo.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0"
+  }
+}
