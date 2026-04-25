@@ -25,6 +25,17 @@ test('research agent stays on rails', async () => {
 
 First run writes the snapshot. Every run after that diffs against it. If the agent calls a different tool, calls them in a different order, or starts erroring, the test fails with a readable diff. Regenerate with `AGENTSNAP_UPDATE=1`.
 
+TypeScript types ship in the box (`src/index.d.ts`) — no `@types/agentsnap` package needed.
+
+### See it in action
+
+```bash
+git clone https://github.com/MukundaKatta/agentsnap && cd agentsnap
+node examples/demo-regression.js
+```
+
+A fake "research agent" gets quietly swapped for one that calls `fetch_url` instead of `search`. agentsnap prints the colored diff that would block CI.
+
 ## Why
 
 Most LLM eval libraries score outputs against expected strings. That misses the actual failure mode of agents in production: they start calling the wrong tools, or call them in the wrong order, or stop calling one entirely. agentsnap captures the *trace* — the ordered sequence of tool calls, their arguments, and a hash of their results — and treats it like a Jest snapshot. If anything structural changes, your test runner tells you.
@@ -148,7 +159,7 @@ await expectSnapshot(trace, path, {
 
 ## Status
 
-v0.1.0 — initial release. Core API stable. Adapter packages for the Anthropic SDK, OpenAI SDK, and MCP clients are planned for v0.2 to remove the need for manual `traceTool()` wrapping.
+v0.1.0 — initial release. Core API stable, TypeScript types included, 33 unit tests, CI on Node 20/22/24. Adapter packages for the Anthropic SDK, OpenAI SDK, and MCP clients are planned for v0.2 to remove the need for manual `traceTool()` wrapping.
 
 ## License
 
