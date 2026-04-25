@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "model": "mock-deterministic",
+  "input": "SFO",
+  "output": "SFO is San Francisco",
+  "tools": [
+    {
+      "name": "lookup_city",
+      "args": {
+        "code": "SFO"
+      },
+      "result_hash": "sha256:fb4cd1f2d946618719ce7fb5321e9c782ba1984f9c669b17675e1792b4284bb6"
+    }
+  ],
+  "error": null,
+  "fingerprint": {
+    "node": "v25.6.1",
+    "agentsnap": "0.1.0"
+  }
+}

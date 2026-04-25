@@ -1,0 +1,47 @@
+{
+  "name": "agentsnap",
+  "version": "0.1.0",
+  "description": "Snapshot tests for AI agents — record tool-call traces, diff against baselines, fail CI on regressions. Zero dependencies, drops into any test runner.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test 'test/**/*.test.js'",
+    "test:examples": "node --test 'examples/**/*.test.js'",
+    "test:all": "node --test 'test/**/*.test.js' 'examples/**/*.test.js'"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "llm",
+    "snapshot",
+    "testing",
+    "regression",
+    "tool-use",
+    "anthropic",
+    "openai",
+    "mcp",
+    "vitest",
+    "jest"
+  ],
+  "author": "MukundaKatta",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MukundaKatta/agentsnap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MukundaKatta/agentsnap/issues"
+  },
+  "homepage": "https://github.com/MukundaKatta/agentsnap#readme"
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "model": "mock-deterministic",
+  "input": "Book me a cheap NYC→SFO flight, prefer window seat",
+  "output": "Booked DL456 (window). CONF-DL456-window.",
+  "tools": [
+    {
+      "name": "search_flights",
+      "args": {
+        "from": "NYC",
+        "to": "SFO"
+      },
+      "result_hash": "sha256:297a9332e863b705a041f55e0786624fa5e7c4d7cbd1417bd34fa92042f62499"
+    },
+    {
+      "name": "check_seat_map",
+      "args": {
+        "flightId": "DL456"
+      },
+      "result_hash": "sha256:b621cccec3d89ba4afe9b0c5df7c14cdaed7632851a4820b9da5aa9bc4f7c5db"
+    },
+    {
+      "name": "book_flight",
+      "args": {
+        "flightId": "DL456",
+        "seat": "window"
+      },
+      "result_hash": "sha256:71fb22aa4deaeb244991dfb350ca574284441da806492e0f74fae015e0d08a1d"
+    }
+  ],
+  "error": null,
+  "fingerprint": {
+    "node": "v25.6.1",
+    "agentsnap": "0.1.0"
+  }
+}
