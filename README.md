@@ -157,6 +157,18 @@ await expectSnapshot(trace, path, {
 - **Not a tracer for production.** This is a test-time tool. For production observability, reach for OpenTelemetry, Langfuse, etc.
 - **Not a workflow product.** No CLI, no YAML schema, no cloud upload, no Slack digest. One primitive, shipped well.
 
+## Sibling libraries
+
+Part of the agent reliability stack — all `@mukundakatta/*` scoped, all zero-dep:
+
+- [`@mukundakatta/agentfit`](https://www.npmjs.com/package/@mukundakatta/agentfit) — fit messages to budget. *Fit it.*
+- **`@mukundakatta/agentsnap`** — snapshot tests for tool-call traces. *Test it.* (this)
+- [`@mukundakatta/agentguard`](https://www.npmjs.com/package/@mukundakatta/agentguard) — network egress firewall. *Sandbox it.*
+- [`@mukundakatta/agentvet`](https://www.npmjs.com/package/@mukundakatta/agentvet) — tool-arg validator. *Vet it.*
+- [`@mukundakatta/agentcast`](https://www.npmjs.com/package/@mukundakatta/agentcast) — structured output enforcer. *Validate it.*
+
+Natural pipeline: **fit → guard → snap → vet → cast**.
+
 ## Status
 
 v0.1.0 — initial release. Core API stable, TypeScript types included, 33 unit tests, CI on Node 20/22/24. Adapter packages for the Anthropic SDK, OpenAI SDK, and MCP clients are planned for v0.2 to remove the need for manual `traceTool()` wrapping.
