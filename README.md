@@ -151,6 +151,23 @@ await expectSnapshot(trace, path, {
 
 `record()` wraps any async function. Whether your tools call a deterministic mock or the live Anthropic SDK, the recording flow is identical. For deterministic snapshots in CI, mock the model and call real tools (or vice versa) depending on what you want to gate.
 
+## CLI
+
+`@mukundakatta/agentsnap` ships an `agentsnap` binary for diffing/normalizing/updating trace files outside a test runner — handy in CI or for ad-hoc inspection:
+
+```bash
+# Diff two recorded traces; exits 1 on drift
+npx -p @mukundakatta/agentsnap agentsnap diff baseline.json current.json --pretty
+
+# Normalize a trace (strip fingerprint, sort keys) for stable storage
+cat trace.json | npx -p @mukundakatta/agentsnap agentsnap normalize - --pretty
+
+# Overwrite a baseline with a new run (after eyeballing the diff)
+npx -p @mukundakatta/agentsnap agentsnap update baseline.json current.json
+```
+
+Output is JSON to stdout (use `--pretty` for indented). Exit code is `0` when there is no drift, `1` when there is, `2` on usage errors. Run `agentsnap --help` for the full subcommand reference.
+
 ## What this is not
 
 - **Not an eval framework.** No scoring, no LLM-judge, no benchmark dataset. Just snapshot-and-diff.

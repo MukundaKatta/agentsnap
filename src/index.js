@@ -13,5 +13,4 @@ export { record, traceTool } from './recorder.js';
 export { expectSnapshot } from './snapshot.js';
 export { diff } from './diff.js';
 export { formatDiff } from './format.js';
-
-export const VERSION = '0.1.0';
+export { VERSION } from './version.js';

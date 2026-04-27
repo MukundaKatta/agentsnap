@@ -1,10 +1,13 @@
 {
   "name": "@mukundakatta/agentsnap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Snapshot tests for AI agents — record tool-call traces, diff against baselines, fail CI on regressions. Zero dependencies, drops into any test runner.",
   "type": "module",
   "main": "src/index.js",
   "types": "./src/index.d.ts",
+  "bin": {
+    "agentsnap": "src/cli.js"
+  },
   "exports": {
     ".": {
       "types": "./src/index.d.ts",
