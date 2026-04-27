@@ -1,7 +1,7 @@
 {
   "name": "@mukundakatta/agentsnap",
   "version": "0.1.1",
-  "description": "Snapshot tests for AI agents — record tool-call traces, diff against baselines, fail CI on regressions. Zero dependencies, drops into any test runner.",
+  "description": "Snapshot tests for AI agents \u2014 record tool-call traces, diff against baselines, fail CI on regressions. Zero dependencies, drops into any test runner.",
   "type": "module",
   "main": "src/index.js",
   "types": "./src/index.d.ts",
@@ -50,5 +50,9 @@
   "bugs": {
     "url": "https://github.com/MukundaKatta/agentsnap/issues"
   },
-  "homepage": "https://github.com/MukundaKatta/agentsnap#readme"
+  "homepage": "https://github.com/MukundaKatta/agentsnap#readme",
+  "funding": [
+    "https://github.com/sponsors/MukundaKatta",
+    "https://agent-stack.dev"
+  ]
 }
