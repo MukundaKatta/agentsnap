@@ -1,5 +1,11 @@
 # agentsnap
 
+[![npm version](https://img.shields.io/npm/v/@mukundakatta/agentsnap.svg)](https://www.npmjs.com/package/@mukundakatta/agentsnap)
+[![npm downloads](https://img.shields.io/npm/dm/@mukundakatta/agentsnap.svg)](https://www.npmjs.com/package/@mukundakatta/agentsnap)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Node](https://img.shields.io/node/v/@mukundakatta/agentsnap.svg)](https://nodejs.org)
+[![Tests](https://img.shields.io/badge/tests-37%2F37-brightgreen.svg)](./test)
+
 **Snapshot tests for AI agents.** Record an agent run's tool-call trace, diff it against a baseline, fail CI on regressions. Zero runtime dependencies. Drops into any test runner.
 
 ```bash
@@ -188,7 +194,7 @@ Natural pipeline: **fit → guard → snap → vet → cast**.
 
 ## Status
 
-v0.1.0 — initial release. Core API stable, TypeScript types included, 33 unit tests, CI on Node 20/22/24. Adapter packages for the Anthropic SDK, OpenAI SDK, and MCP clients are planned for v0.2 to remove the need for manual `traceTool()` wrapping.
+v0.1.2 — tooling polish. Core API stable, TypeScript types included, 37 unit tests, CI on Node 20/22/24. Adapter packages for the Anthropic SDK, OpenAI SDK, and MCP clients are planned for v0.2 to remove the need for manual `traceTool()` wrapping.
 
 ## License
 
