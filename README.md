@@ -6,6 +6,8 @@
 [![Node](https://img.shields.io/node/v/@mukundakatta/agentsnap.svg)](https://nodejs.org)
 [![Tests](https://img.shields.io/badge/tests-37%2F37-brightgreen.svg)](./test)
 
+> 📖 Part of the **[agent-stack](https://dev.to/mukundakatta/i-built-5-tiny-libraries-to-stop-my-ai-agents-from-misbehaving-in-production-3oni)** — 5 tiny libraries to stop AI agents from misbehaving in production.
+
 **Snapshot tests for AI agents.** Record an agent run's tool-call trace, diff it against a baseline, fail CI on regressions. Zero runtime dependencies. Drops into any test runner.
 
 ```bash
