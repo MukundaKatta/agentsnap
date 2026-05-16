@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/MukundaKatta/agentsnap/security/policy
+    about: Report security issues privately per SECURITY.md. Do not file a public issue.
+  - name: Snapshot-update foot-gun help
+    url: https://github.com/MukundaKatta/agentsnap#updating-snapshots
+    about: If you're trying to refresh a baseline, set AGENTSNAP_UPDATE=1 in your test command. The README explains.
+  - name: Other agent-stack libraries
+    url: https://github.com/MukundaKatta/agent-stack
+    about: For agentfit / agentguard / agentcast / agentvet / agenttrace / agentbudget, the canonical landing page lists all six and points to each repo.
