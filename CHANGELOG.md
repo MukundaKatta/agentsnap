@@ -1,5 +1,9 @@
 # Changelog
 
+## [Unreleased]
+
+Production-polish branch (this PR): adds `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CODEOWNERS`, Dependabot config, issue + PR templates, release workflow with npm provenance OIDC, expanded CI (macOS + Windows spot-checks, coverage gate, `npm pack` content check, zero-runtime-deps gate). No runtime behavior changes.
+
 ## [0.1.2] — 2026-04-28
 
 ### Added
