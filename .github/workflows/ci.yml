@@ -44,11 +44,17 @@ jobs:
       - name: Install
         run: npm ci
 
+      # Invoke via `npm test` / `npm run test:examples` so we pick up the
+      # glob shape defined in package.json. Hardcoding the glob in the
+      # workflow drifts when package.json changes; in particular,
+      # `node --test 'test/**/*.test.js'` (recursive glob in single quotes)
+      # fails on Node 20 because Node 20's --test doesn't expand globs
+      # itself, and bash can't expand a single-quoted glob.
       - name: Unit tests
-        run: node --test 'test/**/*.test.js'
+        run: npm test
 
       - name: Runnable examples (smoke)
-        run: node --test 'examples/**/*.test.js'
+        run: npm run test:examples
 
   coverage:
     name: coverage gate

@@ -203,3 +203,13 @@ v0.1.2 — tooling polish. Core API stable, TypeScript types included, 37 unit t
 ## License
 
 MIT
+
+## Repository Health
+
+This repository includes a dependency-free health check for core documentation, metadata, and CI wiring. Run it locally before publishing changes:
+
+```sh
+python3 scripts/check_repository_health.py
+```
+
+The same check runs in GitHub Actions on pushes and pull requests.
